@@ -1,0 +1,27 @@
+from tkinter import *
+import tkinter
+
+top = tkinter.Tk()
+top.wm_title("Rock Paper Scissors")
+top.minsize(width=350, height=150)
+top.maxsize(width=350, height=150)
+B1 = tkinter.Button(top, text ="Rock")
+B1.grid(row=0, column=1)
+B2 = tkinter.Button(top, text ="Paper")
+B2.grid(row=0, column=2)
+B3 = tkinter.Button(top, text ="Scissors")
+B3.grid(row=0, column=3)
+space = tkinter.Label(top, text="")
+space.grid(row=1)
+var = StringVar()
+var.set('Welcome!')
+l = Label(top, textvariable = var)
+l.grid(row=2, column=2)
+wins = IntVar()
+# wins.set(win)
+w = Label(top, textvariable = wins)
+w.grid(row=4, column=2)
+labeled = Label(top, text = "Score:")
+labeled.grid(row=3, column=2)
+
+top.mainloop()
